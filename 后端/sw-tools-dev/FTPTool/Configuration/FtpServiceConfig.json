@@ -1,0 +1,18 @@
+{
+    "RemoteIpConfigList": [
+		{
+            "ServiceName": "Inspection",
+            "Host": "172.17.60.235",
+            "Username": "SOI\\Administrator",
+            "Password": "smee1525",
+            "Port": 21
+        },
+		{
+            "ServiceName": "MarkMeasure",
+            "Host": "172.18.15.33",
+            "Username": "ADAEX-Client-611",
+            "Password": "Smee1525",
+            "Port": 21
+        }
+    ]
+}
