@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FluentFTP.Logging</name>
+    </assembly>
+    <members>
+        <member name="T:FluentFTP.Logging.FtpLogAdapter">
+            <summary>
+            Logging adapter to help FluentFTP integrate with MELA-compatible Loggers (NLog, Serilog, Log4Net, PLogger, etc).
+            Read the Logging page: https://github.com/robinrodricks/FluentFTP/wiki/Logging
+            </summary>
+        </member>
+    </members>
+</doc>
