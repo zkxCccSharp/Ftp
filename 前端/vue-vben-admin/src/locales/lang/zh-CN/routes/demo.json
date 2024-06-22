@@ -156,7 +156,9 @@
     "role": "角色管理"
   },
   "table": {
-    "allTask":"任务列表",
+    "allTask":"全部任务",
+    "ExTask":"异常任务",
+    "QueryTask":"查询任务",
     "uploadTask":"上传任务",
     "downloadTask":"下载任务",
     "table": "Table",

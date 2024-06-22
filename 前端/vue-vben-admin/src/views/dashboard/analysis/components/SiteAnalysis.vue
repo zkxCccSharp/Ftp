@@ -24,11 +24,11 @@
   const tabListTitle = [
     {
       key: 'tab1',
-      tab: '流量趋势',
+      tab: '任务趋势',
     },
     {
       key: 'tab2',
-      tab: '访问量',
+      tab: '任务量',
     },
   ];
 

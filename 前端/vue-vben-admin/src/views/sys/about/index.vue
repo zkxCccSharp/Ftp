@@ -3,15 +3,11 @@
     <template #headerContent>
       <div class="flex justify-between items-center">
         <span class="flex-1">
-          <a :href="GITHUB_URL" target="_blank">{{ name }}</a>
-          是一个基于Vue3.0、Vite、 Ant-Design-Vue 、TypeScript
-          的后台解决方案，目标是为中大型项目开发,提供现成的开箱解决方案及丰富的示例,原则上不会限制任何代码用于商用。
+          该网站用来查询FTP程序上传和下载的详细信息 @SMEE
         </span>
       </div>
     </template>
     <Description @register="infoRegister" class="enter-y" />
-    <Description @register="register" class="my-4 enter-y" />
-    <Description @register="registerDev" class="enter-y" />
   </PageWrapper>
 </template>
 <script lang="ts" setup>
@@ -47,16 +43,6 @@
       field: 'doc',
       render: commonLinkRender('文档地址'),
     },
-    {
-      label: '预览地址',
-      field: 'preview',
-      render: commonLinkRender('预览地址'),
-    },
-    {
-      label: 'Github',
-      field: 'github',
-      render: commonLinkRender('Github'),
-    },
   ];
 
   const infoData = {
@@ -73,20 +59,6 @@
 
   Object.keys(devDependencies).forEach((key) => {
     devSchema.push({ field: key, label: key });
-  });
-
-  const [register] = useDescription({
-    title: '生产环境依赖',
-    data: dependencies,
-    schema: schema,
-    column: 3,
-  });
-
-  const [registerDev] = useDescription({
-    title: '开发环境依赖',
-    data: devDependencies,
-    schema: devSchema,
-    column: 3,
   });
 
   const [infoRegister] = useDescription({

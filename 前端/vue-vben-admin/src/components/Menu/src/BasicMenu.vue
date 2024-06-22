@@ -86,7 +86,7 @@
   });
 
   const getInlineCollapseOptions = computed(() => {
-    const isInline = props.mode === MenuModeEnum.INLINE;
+    const isInline = props.mode === MenuModeEnum.HORIZONTAL;
 
     const inlineCollapseOptions: { inlineCollapsed?: boolean } = {};
     if (isInline) {

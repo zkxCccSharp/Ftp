@@ -7,7 +7,7 @@ export const multipleTabHeight = 30;
 export const darkMode = ThemeEnum.LIGHT;
 
 // 页脚固定高度
-export const footerHeight = 75;
+export const footerHeight = 30;
 
 // .@{namespace}-layout-multiple-header__placeholder
 // 全屏页头动画时长
@@ -43,10 +43,10 @@ export const HEADER_PRESET_BG_COLOR_LIST: string[] = [
 
 // sider preset color
 export const SIDE_BAR_BG_COLOR_LIST: string[] = [
+  '#ffffff',
   '#001529',
   '#212121',
   '#273352',
-  '#ffffff',
   '#191b24',
   '#191a23',
   '#304156',

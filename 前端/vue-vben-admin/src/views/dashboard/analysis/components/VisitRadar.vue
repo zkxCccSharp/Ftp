@@ -1,5 +1,5 @@
 <template>
-  <Card title="转化率" :loading="loading">
+  <Card title="任务类型" :loading="loading">
     <div ref="chartRef" :style="{ width, height }"></div>
   </Card>
 </template>
@@ -31,7 +31,7 @@
       setOptions({
         legend: {
           bottom: 0,
-          data: ['访问', '购买'],
+          data: ['分类'],
         },
         tooltip: {},
         radar: {
@@ -39,22 +39,16 @@
           splitNumber: 8,
           indicator: [
             {
-              name: '电脑',
+              name: '上传文件夹',
             },
             {
-              name: '充电器',
+              name: '上传文件',
             },
             {
-              name: '耳机',
+              name: '下载文件夹',
             },
             {
-              name: '手机',
-            },
-            {
-              name: 'Ipad',
-            },
-            {
-              name: '耳机',
+              name: '下载文件',
             },
           ],
         },
@@ -71,15 +65,8 @@
             },
             data: [
               {
-                value: [90, 50, 86, 40, 50, 20],
-                name: '访问',
-                itemStyle: {
-                  color: '#b6a2de',
-                },
-              },
-              {
                 value: [70, 75, 70, 76, 20, 85],
-                name: '购买',
+                name: '分类',
                 itemStyle: {
                   color: '#5ab1ef',
                 },

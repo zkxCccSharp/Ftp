@@ -221,7 +221,7 @@ const linkRoute = {
       name: 'Doc',
       meta: {
         title: 'routes.demo.iframe.doc',
-        frameSrc: 'https://doc.vvbin.cn/',
+        frameSrc: 'https://baidu.com/',
       },
     },
     {

@@ -1,10 +1,5 @@
 <template>
   <div :class="prefixCls">
-    <a-button type="primary" block @click="handleCopy">
-      <CopyOutlined class="mr-2" />
-      {{ t('layout.setting.copyBtn') }}
-    </a-button>
-
     <a-button color="warning" block @click="handleResetSetting" class="my-3">
       <RedoOutlined class="mr-2" />
       {{ t('common.resetText') }}
@@ -17,9 +12,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { unref } from 'vue';
 
-  import { CopyOutlined, RedoOutlined } from '@ant-design/icons-vue';
+  import { RedoOutlined } from '@ant-design/icons-vue';
 
   import { useAppStore } from '@/store/modules/app';
   import { usePermissionStore } from '@/store/modules/permission';
@@ -29,7 +23,6 @@
   import { useDesign } from '@/hooks/web/useDesign';
   import { useI18n } from '@/hooks/web/useI18n';
   import { useMessage } from '@/hooks/web/useMessage';
-  import { copyText } from '@/utils/copyTextToClipboard';
   import { updateColorWeak } from '@/logics/theme/updateColorWeak';
   import { updateGrayMode } from '@/logics/theme/updateGrayMode';
   import defaultSetting from '@/settings/projectSetting';
@@ -40,19 +33,10 @@
   const permissionStore = usePermissionStore();
   const { prefixCls } = useDesign('setting-footer');
   const { t } = useI18n();
-  const { createSuccessModal, createMessage } = useMessage();
+  const { createMessage } = useMessage();
   const tabStore = useMultipleTabStore();
   const userStore = useUserStore();
   const appStore = useAppStore();
-
-  function handleCopy() {
-    copyText(JSON.stringify(unref(appStore.getProjectConfig), null, 2), null).then(() => {
-      createSuccessModal({
-        title: t('layout.setting.operatingTitle'),
-        content: t('layout.setting.operatingContent'),
-      });
-    });
-  }
 
   function handleResetSetting() {
     try {

@@ -16,11 +16,19 @@ const comp: AppRouteModule = {
 
   children: [
     {
-      path: 'allTask',
-      name: 'allTask',
-      component: () => import('@/views/demo/table/Basic.vue'),
+      path: 'exTask',
+      name: 'exTask',
+      component: () => import('@/views/demo/table/ExTask.vue'),
       meta: {
-        title: t('routes.demo.table.allTask'),
+        title: t('routes.demo.table.ExTask'),
+      },
+    },
+    {
+      path: 'queryTask',
+      name: 'queryTask',
+      component: () => import('@/views/demo/table/QueryTask.vue'),
+      meta: {
+        title: t('routes.demo.table.QueryTask'),
       },
     },
     {
@@ -37,6 +45,14 @@ const comp: AppRouteModule = {
       component: () => import('@/views/demo/table/EditRowTable.vue'),
       meta: {
         title: t('routes.demo.table.downloadTask'),
+      },
+    },
+    {
+      path: 'allTask',
+      name: 'allTask',
+      component: () => import('@/views/demo/table/AllTask.vue'),
+      meta: {
+        title: t('routes.demo.table.allTask'),
       },
     },
     {

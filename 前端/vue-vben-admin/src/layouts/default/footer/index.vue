@@ -54,7 +54,7 @@
 
   .@{prefix-cls} {
     // 页脚固定高度
-    height: 75px;
+    height: 30px;
     color: @normal-color;
     text-align: center;
 
