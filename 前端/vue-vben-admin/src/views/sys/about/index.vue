@@ -2,9 +2,7 @@
   <PageWrapper title="关于">
     <template #headerContent>
       <div class="flex justify-between items-center">
-        <span class="flex-1">
-          该网站用来查询FTP程序上传和下载的详细信息 @SMEE
-        </span>
+        <span class="flex-1"> 该网站用来查询FTP程序上传和下载的详细信息 @SMEE </span>
       </div>
     </template>
     <Description @register="infoRegister" class="enter-y" />
