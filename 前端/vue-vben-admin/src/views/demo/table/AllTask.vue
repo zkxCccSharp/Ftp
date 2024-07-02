@@ -22,6 +22,7 @@
   import { BasicTable, ColumnChangeParam } from '@/components/Table';
   import { getBasicColumns } from './tableData';
   import { useMessage } from '@/hooks/web/useMessage';
+  import { getAppEnvConfig } from '@/utils/env';
 
   const { createMessage: msg } = useMessage();
   const canResize = ref(false);
@@ -31,6 +32,7 @@
   const pagination = ref<any>(false);
   const columns = getBasicColumns();
   const data = ref([]); // 创建响应式变量 data
+  const { VITE_GLOB_API_URL_FTP } = getAppEnvConfig();
 
   async function fetchTask() {
     try {
@@ -38,7 +40,7 @@
       const requestBody = {
         query: '',
       };
-      const response = await axios.post('http://192.168.3.34:23333/alltask', requestBody);
+      const response = await axios.post(VITE_GLOB_API_URL_FTP + '/alltask', requestBody);
       data.value = response.data; // 将返回的数据赋值给 data
       pagination.value = { pageSize: 15 };
       loading.value = false;

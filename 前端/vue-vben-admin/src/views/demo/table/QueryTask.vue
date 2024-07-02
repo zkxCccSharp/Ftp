@@ -50,7 +50,9 @@
   } from '@/components/Table';
   import { useMessage } from '@/hooks/web/useMessage';
   import { Progress } from 'ant-design-vue';
+  import { getAppEnvConfig } from '@/utils/env';
 
+  const { VITE_GLOB_API_URL_FTP } = getAppEnvConfig();
   const { createMessage: msg } = useMessage();
   const isFetching = ref(false);
   const canResize = ref(false);
@@ -172,7 +174,7 @@
       const requestBody = {
         zkx: query.value,
       };
-      const response = await axios.post('http://192.168.3.34:23333/Task', requestBody);
+      const response = await axios.post(VITE_GLOB_API_URL_FTP + '/Task', requestBody);
       data.value = response.data;
       pagination.value = { pageSize: 15 };
       loading.value = false;
@@ -196,7 +198,7 @@
 
   async function handleEdit(record: EditRecordRow) {
     try {
-      const response = await axios.post('http://192.168.3.34:23333/RetryTask', { id: record.Id });
+      const response = await axios.post(VITE_GLOB_API_URL_FTP + '/RetryTask', { id: record.Id });
       const newProgress = response.data;
 
       // Update the record's progress
